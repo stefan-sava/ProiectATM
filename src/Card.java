@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Objects;
 
 public class Card {
@@ -6,13 +7,15 @@ public class Card {
     private int cardSecurityCode;
     private int PIN;
     private float cardSold;
+    private ArrayList extrasCont;
 
-    public Card(int cardNumber, String cardHolderName, int cardSecurityCode, int PIN, float cardSold) {
+    public Card(int cardNumber, String cardHolderName, int cardSecurityCode, int PIN, float cardSold, ArrayList extrasCont) {
         this.cardNumber = cardNumber;
         this.cardHolderName = cardHolderName;
         this.cardSecurityCode = cardSecurityCode;
         this.PIN = PIN;
         this.cardSold = cardSold;
+        this.extrasCont = extrasCont;
     }
 
     public int getCardNumber() {
