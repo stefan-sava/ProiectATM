@@ -1,11 +1,11 @@
 import java.util.Objects;
 
-public class User {
+public class Card {
     private int cardNumber;
     private String cardHolderName;
     private int cardSecurityCode;
 
-    public User(int cardNumber, String cardHolderName, int cardSecurityCode) {
+    public Card(int cardNumber, String cardHolderName, int cardSecurityCode) {
         this.cardNumber = cardNumber;
         this.cardHolderName = cardHolderName;
         this.cardSecurityCode = cardSecurityCode;
@@ -38,7 +38,7 @@ public class User {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof User user)) return false;
+        if (!(o instanceof Card user)) return false;
         return getCardNumber() == user.getCardNumber() && getCardSecurityCode() == user.getCardSecurityCode() && Objects.equals(getCardHolderName(), user.getCardHolderName());
     }
 
